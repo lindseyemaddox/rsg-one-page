@@ -1,0 +1,60 @@
+
+section#services
+	article
+		display: inline-block
+		width: 24.5%
+		margin: 0 1px
+		background-color: $light
+		position: relative
+		vertical-align: top
+		transition: all 400ms ease
+		span
+			color: $white
+			font-size: 10em
+			text-align: center
+			display: block
+			z-index: 0
+			margin: 70px 0
+			transition: all 400ms ease
+		div.overlay
+			position: absolute
+			top: 0
+			bottom: 0
+			width: 100%
+			opacity: 0
+			background-color: #000
+			transition: all 400ms ease
+		div.text
+			position: absolute
+			opacity: 0
+			width: 100%
+			font-size: 1em
+			text-align: center
+			color: $white
+			padding: 25% 0 0
+			z-index: 1
+			transition: all 400ms ease
+		p.project-title
+			.proxima-nova-black
+			text-transform: uppercase
+			letter-spacing: 1px
+			color: $white
+			&:after
+				content: ""
+				border-bottom: 4px solid $pink
+				width: 67px
+				display: block
+				margin: 16px auto
+		p.project-details
+			$primary-font($font-weight-light)
+			color: $white
+			padding: 0 20%
+		&:hover
+			div.overlay
+				opacity: 1
+			div.text
+				opacity: 1
+			span
+				color: #464646
+				position: relative
+				transition: all 400ms ease

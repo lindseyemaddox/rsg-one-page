@@ -1,0 +1,81 @@
+
+footer
+	.inner
+		span.icon-logo
+		.socials
+			a(href="https://www.facebook.com/stuntdoublecreative" target="_blank" rel="nofollow")
+			a(href="https://instagram.com/stuntdoublecreative/" target="_blank" rel="nofollow")
+			a(href="https://twitter.com/stntdblcreates/" target="_blank" rel="nofollow")
+			a(href="https://www.etsy.com/shop/StuntDoubleCreative" target="_blank" rel="nofollow")
+		p &copy;2016 Stunt Double Creative, LLC | All Rights Reserved
+		.clear
+
+	script.
+		$(function(){
+			$('#main > li > a').click(function(){
+				$('#main > li').removeClass('selected');
+				$(this).closest('li').addClass('selected');
+			});
+		});
+
+		$(window).load(function() {
+			var $el, leftPos,tabSelected,
+			$tabsNav = $("#main");
+				if ($tabsNav.length > 0) {
+					var width = $('#main').width();
+					$tabsNav.css('width', width + 'px');
+				if(!tabSelected) {
+					var tabSelected = $('#main li:first-child');
+					tabSelected.addClass('selected');
+				}
+				if($('#main li#line').length == 0) {
+					$tabsNav.append("<li id='line'></li>");
+				}
+				$("#main #line").css({
+					left: tabSelected.position().left,
+					width: tabSelected.width()
+				}).data("origLeft", $("#line").position().left);
+
+				$("ul#main li").hover(function () {
+					$el = $(this);
+					width = $el.width();
+					$("ul#main li#line").css("width", width);
+					leftPos = $el.position().left;
+					$("ul#main li#line").css("left", leftPos);
+				}, function () {
+					$("ul#main li#line").css({
+						left: $(".selected").position().left,
+						width: $(".selected").width()
+				});
+			});
+		}
+
+		$(function(){
+			var $container = $('#container');
+			$container.isotope({
+				itemSelector : '.portfolio-item'
+			});
+			var $optionSets = $('#options .option-set'),
+				$optionLinks = $optionSets.find('a');
+			$optionLinks.click(function(){
+				var $this = $(this);
+				if ( $this.hasClass('selected') ) {
+					return false;
+				}
+				var $optionSet = $this.parents('.option-set');
+				$optionSet.find('.selected').removeClass('selected');
+				$this.addClass('selected');
+				var options = {},
+					key = $optionSet.attr('data-option-key'),
+					value = $this.attr('data-option-value');
+				value = value === 'false' ? false : value;
+				options[ key ] = value;
+				if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+					changeLayoutMode( $this, options )
+				} else {
+					$container.isotope( options );
+				}
+				return false;
+				});
+			});
+		});

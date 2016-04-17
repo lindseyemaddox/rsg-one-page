@@ -1,0 +1,19 @@
+
+require form-router
+
+section#contact
+  .inner
+    block contact-headline
+    article.right.clear
+      block contact-connect
+    article.left.clear
+
+      form(name="add-estimation", method="post")
+        .input
+          span.label Title
+          input(type="text", name="title")
+        .input
+          span.label Description
+          textarea(name="description", cols="40", rows="5")
+        .actions
+          input(type="submit", value="add")

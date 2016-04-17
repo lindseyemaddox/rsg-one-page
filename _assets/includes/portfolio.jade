@@ -1,0 +1,36 @@
+
+section#portfolio
+  .inner
+    block portfolio-heading
+    #options.clear
+      ul#filters.option-set.clearfix.btnBox(data-option-key="filter")
+        li
+          a.btn.selected(href="#filter" data-option-value="*") all
+        li
+          a.btn(href="#filter" data-option-value=".branding") Branding
+        li
+          a.btn(href="#filter" data-option-value=".print") Print
+        li
+          a.btn(href="#filter" data-option-value=".web-design") Web Design
+        li
+          a.btn(href="#filter" data-option-value=".illustration") Illustration
+    #container.clear
+      a.portfolio-item.fancybox.print(href="#tenn" title="10 out of TN poster" data-fancybox-group="print")
+        .overlay
+        .text
+          block portfolio1-overlay
+        img(src="/_assets/images/portfolio-thumb-10tn.jpg" alt="10 out of TN poster thumb" title="10 out of TN poster thumb")
+      .lightbox#tenn(style="display: none;")
+        block portfolio1-content
+        img(src="/_assets/images/portfolio-10outoftenn.jpg" alt="10 out of TN poster" title="10 out of TN poster")
+        img(src="/_assets/images/portfolio-10outoftenn2.jpg" alt="10 out of TN poster" title="10 out of TN poster")
+      a.portfolio-item.fancybox.print(href="#bhollandpackage" title="Brandon Holland package" data-fancybox-group="print")
+        .overlay
+        .text
+          block portfolio2-overlay
+        img(src="/_assets/images/portfolio-thumb-hollandcd.jpg" alt="Brandon Holland package thumb" title="Brandon Holland package thumb")
+      .lightbox#bhollandpackage(style="display: none;")
+        block portfolio2-content
+        img(src="/_assets/img/portfolio-bholland1.jpg" alt="Brandon Holland package" title="Brandon Holland package")
+        img(src="/_assets/img/portfolio-bholland2.jpg" alt="Brandon Holland package" title="Brandon Holland package")
+        img(src="/_assets/img/portfolio-bholland3.jpg" alt="Brandon Holland package" title="Brandon Holland package")

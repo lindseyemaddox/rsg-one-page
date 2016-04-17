@@ -1,0 +1,95 @@
+
+h1
+	primary-font($primary-font-light)
+	font-size: 1em
+	line-height: 1.25em
+	color: $black
+	text-align: justify
+	letter-spacing: 0.1px
+	padding-bottom: 40px
+	span.bold
+		primary-font($primary-font-normal)
+		text-transform: uppercase
+		letter-spacing: 0.5px
+h2
+	primary-font($primary-font-light)
+	font-size: 1em
+	line-height: 1.25em
+	color: $black
+	text-align: left
+	letter-spacing: 0.1px
+h3
+	secondary-font()
+	font-size: 2.5em
+	color: $pink
+	text-align: center
+	letter-spacing: 0.1px
+	text-transform: uppercase
+	padding-top: 133px
+h4
+	primary-font($primary-font-light)
+	font-size: 1em
+	color: $black
+	text-align: center
+	letter-spacing: 0.1px
+	text-transform: uppercase
+	padding-top: 35px
+	&:after
+		content: ""
+		border-bottom: 4px solid $black
+		width: 26px
+		display: block
+		margin: 38px auto 54px
+h5
+	secondary-font()
+	font-size: 1.875em
+	color: $pink
+	text-align: center
+	letter-spacing: 0.1px
+	text-transform: uppercase
+	margin-top: 30px
+p
+	primary-font($primary-font-light)
+	font-size: 1em
+	line-height: 1.25em
+	color: $black
+	text-align: center
+	letter-spacing: 0.1px
+	&.tag
+		font-size: 1.30375em
+		line-height: 1.4500000000000002em
+		color: $white
+		letter-spacing: 8px
+		text-transform: uppercase
+		padding: 0 8%
+	&.headline
+		secondary-font()
+		font-size: 6.52em
+		line-height: 0.9em
+		padding-bottom: 30px
+		color: $white
+		text-align: center
+		letter-spacing: 5px
+		text-transform: uppercase
+.btnBox
+	text-align: center
+	.btn
+		primary-font($primary-font-bold)
+		font-size: 1.15em
+		letter-spacing: 3px
+		text-transform: uppercase
+		color: $black
+		padding: 10px 15px
+		display: inline-block
+		border: 0.5px solid $black
+		text-decoration: none
+		transition: color, 400ms, ease
+		&:hover
+			background-color: $black
+			color: $white
+		&.alt
+			color: $white
+			border-color: $white
+			&:hover
+				background-color: $white
+				color: $black
