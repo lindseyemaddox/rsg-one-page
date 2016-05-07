@@ -2,9 +2,9 @@
 $sidebar-width = 340px
 
 .inner
-  max-width: 1210px
-  width: 80%
-  margin: 0 auto
+  max-width: 1000px
+  // width: 80%
+  margin: 0 auto 0 30px
 .wrapper
     display: table
     height: 100%
@@ -13,14 +13,19 @@ $sidebar-width = 340px
       display: table-row
       height: 100%
     aside
+        bottom: 0
         display: table-cell
         min-width: $sidebar-width
         width: $sidebar-width
         background-color: pink
+        position: fixed
+        top: 0
     section.content
         display: table-cell
         width: 100%
         background-color: green
+        padding-left: $sidebar-width
 .grid
-  max-width: 1000px
-  margin: 0 auto
+  // max-width: 1000px
+  // margin: 0 auto
+  width: 100%

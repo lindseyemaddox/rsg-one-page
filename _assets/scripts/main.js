@@ -79,19 +79,16 @@ function placeholderSupported() {
 }
 
 function stickyNav() {
-
-        $('nav').scrollspy({
-            min: $('#about').offset().top,
-            max: $('footer').offset().top,
-            container: window,
-            onEnter: function() {
-                $("nav").addClass('fixed');
-                // setTimeout(function(){$('.fixed').addClass('show');},1000);
-            },
-            onLeave: function() {
-                $("nav").removeClass('fixed');
-                // $("nav").removeClass('show');
-            }
-        });
+    $('nav').scrollspy({
+        min: $('#about').offset().top,
+        max: $('footer').offset().top,
+        container: window,
+        onEnter: function() {
+            $("nav").addClass('fixed');
+        },
+        onLeave: function() {
+            $("nav").removeClass('fixed');
+        }
+    });
 }
 
